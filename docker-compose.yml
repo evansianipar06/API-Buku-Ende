@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  nodeapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_HOST: xx.xx.xx.xx
+      DB_USER: xxx
+      DB_PASSWORD: xxx
+      DB_DATABASE: dbbe
+      DB_PORT: 3306
+    network_mode: "bridge"
+    ports:
+      - "3002:3002"
